@@ -22,6 +22,8 @@ import { NewPassItem } from '../components/NewPassItem'
 import uuid from 'react-native-uuid'
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native'
 
+import * as Clipboard from 'expo-clipboard'
+
 export function PasswordGen() {
   const toast = useToast()
 
@@ -29,7 +31,8 @@ export function PasswordGen() {
 
   const [history, setHistory] = useState<string[]>([])
 
-  function handleCopyNewPassword() {
+  async function handleCopyNewPassword() {
+    await Clipboard.setStringAsync(pass)
     toast.show({
       placement: 'top',
       render: ({ id }) => {

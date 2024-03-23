@@ -22,7 +22,8 @@
     "react-native": "0.73.6",
     "react-native-clipboard": "^0.0.5",
     "react-native-svg": "^14.1.0",
-    "react-native-uuid": "^2.0.2"
+    "react-native-uuid": "^2.0.2",
+    "expo-clipboard": "~5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
