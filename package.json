@@ -13,12 +13,14 @@
     "@gluestack-style/react": "^1.0.52",
     "@gluestack-ui/config": "^1.1.18",
     "@gluestack-ui/themed": "^1.1.17",
+    "@react-native-clipboard/clipboard": "^1.13.2",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "expo": "~50.0.14",
     "expo-font": "~11.10.3",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
     "react-native": "0.73.6",
+    "react-native-clipboard": "^0.0.5",
     "react-native-svg": "^14.1.0"
   },
   "devDependencies": {
