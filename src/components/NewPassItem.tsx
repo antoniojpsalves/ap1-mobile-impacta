@@ -23,6 +23,7 @@ export function NewPassItem({
           paddingHorizontal: 20,
           paddingVertical: 14,
           borderRadius: 25,
+          minWidth: 120,
         },
         currentShow && { borderWidth: 1, borderColor: colors.indigo700 },
       ]}

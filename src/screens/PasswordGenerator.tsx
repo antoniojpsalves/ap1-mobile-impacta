@@ -9,6 +9,10 @@ import {
   FlatList,
   Image,
   Center,
+  useToast,
+  Toast,
+  ToastTitle,
+  ToastDescription,
 } from '@gluestack-ui/themed'
 
 import { ScreenHeader } from '../components/ScreenHeader'
@@ -19,11 +23,27 @@ import uuid from 'react-native-uuid'
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native'
 
 export function PasswordGen() {
+  const toast = useToast()
+
   const [pass, setPass] = useState('')
 
   const [history, setHistory] = useState<string[]>([])
 
   function handleCopyNewPassword() {
+    toast.show({
+      placement: 'top',
+      render: ({ id }) => {
+        const toastId = 'toast-' + id
+        return (
+          <Toast nativeID={toastId} action="info" variant="accent">
+            <VStack space="md">
+              <ToastTitle>Boa!</ToastTitle>
+              <ToastDescription>Nova senha copiada. 👌</ToastDescription>
+            </VStack>
+          </Toast>
+        )
+      },
+    })
     // Clipboard.setString(pass)
   }
 
@@ -57,18 +77,26 @@ export function PasswordGen() {
         </Heading>
         <Divider bg="$blueGray300" w="$5/6" alignSelf="center" />
 
-        <FlatList
-          data={history}
-          keyExtractor={(item) => String(item)}
-          renderItem={({ item }) => {
-            const label = String(item)
-            return <ItemList title={label} key={label} />
-          }}
-          ListEmptyComponent={() => <EmptList />}
-          showsVerticalScrollIndicator={false}
-          w="$full"
-          padding={20}
-        />
+        <VStack w="$full" h="$80">
+          <FlatList
+            data={history}
+            keyExtractor={(item) => String(item)}
+            renderItem={({ item }) => {
+              const label = String(item)
+              return (
+                <ItemList
+                  title={label}
+                  key={label}
+                  onLongPress={handleCopyNewPassword}
+                />
+              )
+            }}
+            ListEmptyComponent={() => <EmptList />}
+            showsVerticalScrollIndicator={false}
+            w="$full"
+            padding={20}
+          />
+        </VStack>
       </VStack>
     </VStack>
   )
