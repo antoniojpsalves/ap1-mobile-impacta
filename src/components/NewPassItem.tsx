@@ -18,7 +18,12 @@ export function NewPassItem({
     <TouchableOpacity
       {...rest}
       style={[
-        { backgroundColor: colors.blueGray400 },
+        {
+          backgroundColor: colors.coolGray800,
+          paddingHorizontal: 20,
+          paddingVertical: 14,
+          borderRadius: 25,
+        },
         currentShow && { borderWidth: 1, borderColor: colors.indigo700 },
       ]}
     >

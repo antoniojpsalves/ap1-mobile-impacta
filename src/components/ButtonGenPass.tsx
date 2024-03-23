@@ -16,6 +16,7 @@ export function ButtomGenPass({ ...rest }: TouchableOpacityProps) {
         alignItems: 'center',
         justifyContent: 'center',
         marginHorizontal: 30,
+        width: '60%',
       }}
     >
       <Text color="$blueGray100" fontSize="$2xl">
