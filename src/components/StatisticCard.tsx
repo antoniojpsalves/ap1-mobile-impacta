@@ -13,12 +13,12 @@ export function StatisticCard({ imc }: StatisticProps) {
 
   if (imc <= 18.5) {
     color = colors.tertiary200
-    alert = 'Cuidado❗você está a baixo do seu peso ideia.'
+    alert = 'Cuidado❗você está a baixo do seu peso ideial.'
   }
 
   if (imc >= 18.5 && imc <= 24.9) {
     color = colors.tertiary300
-    alert = 'Boa, você está dentro do seu peso ideia. 😉'
+    alert = 'Boa, você está dentro do seu peso ideial. 😉'
   }
 
   if (imc >= 24.9 && imc <= 29.9) {
@@ -28,12 +28,12 @@ export function StatisticCard({ imc }: StatisticProps) {
 
   if (imc >= 30.0 && imc <= 34.9) {
     color = colors.rose500
-    alert = 'Atenção, você está com obesidade no primeiro grau 🚨'
+    alert = 'Atenção, você está com obesidade no primeiro grau !🚨'
   }
 
   if (imc >= 34.9 && imc <= 39.9) {
     color = colors.rose700
-    alert = 'Atenção🚨, você está com obesidade no segundo grau 🚨'
+    alert = 'Atenção🚨, você está com obesidade no segundo grau !🚨'
   }
 
   if (imc >= 40.0) {

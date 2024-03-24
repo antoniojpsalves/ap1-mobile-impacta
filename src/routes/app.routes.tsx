@@ -3,7 +3,7 @@ import {
   BottomTabNavigationProp,
 } from '@react-navigation/bottom-tabs'
 
-import { Home } from '../screens/Home'
+// import { Home } from '../screens/Home'
 import { PasswordGen } from '../screens/PasswordGenerator'
 import { Imc } from '../screens/Imc'
 import { Retirement } from '../screens/Retirement'
@@ -41,7 +41,7 @@ export function AppRoutes() {
         },
       }}
     >
-      <Screen
+      {/* <Screen
         name="home"
         component={Home}
         options={{
@@ -49,7 +49,7 @@ export function AppRoutes() {
             <SimpleLineIcons name="home" size={24} color={color} />
           ),
         }}
-      />
+      /> */}
       <Screen
         name="passwordGen"
         component={PasswordGen}
