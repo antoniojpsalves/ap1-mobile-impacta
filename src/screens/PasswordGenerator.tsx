@@ -60,7 +60,7 @@ export function PasswordGen() {
     <VStack flex={1}>
       <ScreenHeader title="Gerador de senhas" />
       <VStack gap={24} alignItems="center" px={8}>
-        <Text color="$blueGray100" mt={48} textAlign="center" fontSize="$2xl">
+        <Text color="$blueGray100" mt={48} textAlign="center" fontSize="$md">
           Aperte no botão a baixo para gerar uma senha:
         </Text>
         <ButtomGenPass onPress={generateNewPass} />
