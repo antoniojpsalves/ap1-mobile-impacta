@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "ap1-mobile-app",
-    "slug": "ap1-mobile-app",
+    "slug": "ap1-mobile-impacta",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,13 +21,20 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0C0C0C"
-      }
+      },
+      "package": "com.antonio.dev.ap1mobileimpacta"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "cf590c01-f68e-403e-8ffb-3a0865f30c1e"
+      }
+    },
+    "owner": "antonio.dev"
   }
 }

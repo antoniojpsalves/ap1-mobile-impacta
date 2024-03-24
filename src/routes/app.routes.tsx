@@ -13,7 +13,7 @@ import { SimpleLineIcons } from '@expo/vector-icons'
 import { config } from '@gluestack-ui/config'
 
 type AppRoutes = {
-  home: undefined
+  // home: undefined
   passwordGen: undefined
   imc: undefined
   retirement: undefined
