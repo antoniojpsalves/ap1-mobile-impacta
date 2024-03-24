@@ -31,7 +31,9 @@ export function ComponentGroupCard({
         />
       </Avatar>
       <VStack>
-        <Heading size="sm">{nome}</Heading>
+        <Heading size="sm" color="$textDark400">
+          {nome}
+        </Heading>
         <Text size="sm">Matrícula: {matricula}</Text>
       </VStack>
     </HStack>
